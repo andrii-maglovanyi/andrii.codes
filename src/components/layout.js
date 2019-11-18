@@ -1,52 +1,68 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useContext, useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "./layout.scss"
+import styled from "styled-components"
 
-const Layout = ({ children }) => {
+import { library } from "@fortawesome/fontawesome-svg-core"
+import {
+  faUser,
+  faSuitcase,
+  faGraduationCap,
+  faFilePdf,
+  faListAlt,
+} from "@fortawesome/free-solid-svg-icons"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+
+import ErrorBoundary from "./error-boundary"
+import { Store } from "../context"
+
+library.add(faUser, faSuitcase, faGraduationCap, faFilePdf, faListAlt, fab)
+
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem;
+`
+
+const Layout = ({ children, exportPdf }) => {
+  const { state } = useContext(Store)
+
+  const cvRef = useRef()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <ErrorBoundary>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        ref={cvRef}
+        exportPdf={exportPdf}
+      />
+      <Main className={state.exportType} ref={cvRef}>
+        {children}
+      </Main>
+    </ErrorBoundary>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  exportPdf: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  exportPdf: false,
 }
 
 export default Layout

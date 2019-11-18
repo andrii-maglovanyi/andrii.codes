@@ -1,42 +1,41 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { forwardRef } from "react"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+import Logo from "../images/logo.svg"
+import Switch from "../components/switch"
+import Pdf from "../components/pdf"
+
+const HeaderWrapper = styled.header`
+  background: #212121;
+  color: var(--gray-color);
+  margin-bottom: 2rem;
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  maxwidth: 960px;
+  padding: 0.5rem 1rem 0.2rem;
+`
+
+const Header = forwardRef((props, cvRef) => (
+  <HeaderWrapper>
+    <HeaderContainer>
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+        <Link to="/">
+          <Logo style={{ width: "80px" }} />
         </Link>
       </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
+      {props.exportPdf && (
+        <>
+          <Pdf ref={cvRef} />|
+        </>
+      )}
+      <Switch className="gtm-toggle-theme" />
+    </HeaderContainer>
+  </HeaderWrapper>
+))
 
 export default Header

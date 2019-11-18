@@ -1,21 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
-export default IndexPage
+import { StateProvider } from "../context"
+
+export default ({ data }) => {
+  const { mdx } = data
+  const { body } = mdx
+
+  return (
+    <StateProvider>
+      <Layout>
+        <SEO title="Home" />
+        <div className="body">
+          <MDXRenderer>{body}</MDXRenderer>
+        </div>
+      </Layout>
+    </StateProvider>
+  )
+}
+
+export const data = graphql`
+  query indexQuery {
+    mdx(fileAbsolutePath: { glob: "**/markdown-pages/index.md" }) {
+      body
+      frontmatter {
+        name
+        title
+      }
+    }
+
+    file(relativePath: { eq: "markdown-pages/index.md" }) {
+      modifiedTime(formatString: "MMMM DD, YYYY")
+    }
+  }
+`

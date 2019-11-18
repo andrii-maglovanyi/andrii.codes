@@ -1,0 +1,53 @@
+.expand {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: rgb(249, 178, 0);
+  cursor: pointer;
+  display: inline-block;
+  flex: 0 1 auto;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  margin-left: auto;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+
+  &.left {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  &:hover {
+    border-color: rgba(249, 178, 0, 0.4);
+  }
+}
+
+.extra {
+  background-color: var(--expand-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  visibility: none;
+
+  > div {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+.expanded {
+  .extra {
+    visibility: visible;
+    max-height: 500px;
+  }
+}

@@ -1,0 +1,163 @@
+:root {
+  --bg-color: white;
+  --font-color: rgba(0, 0, 0, 0.73);
+  --link-color: #21759b;
+  --link-color-hover: #0f3647;
+  --link-color-visited: #9f9f9f;
+  --secondary-color: #666;
+  --gray-color: #ededed;
+  --expand-color: rgba(0, 0, 0, 0.05);
+}
+
+.k-pdf-export {
+  .extra {
+    transition: none;
+    max-height: 0;
+    visibility: hidden;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  &.brief {
+    footer {
+      .find-out-more {
+        visibility: visible;
+      }
+    }
+  }
+
+  &.detailed {
+    .extra {
+      max-height: 500px;
+      visibility: visible;
+    }
+
+    .toggle {
+      display: initial;
+
+      .prefix {
+        display: none;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  --bg-color: #212121;
+  --font-color: rgba(255, 255, 255, 0.73);
+  --link-color: #7ac2e2;
+  --link-color-hover: #4fb0da;
+  --link-color-visited: #cfcfcf;
+  --secondary-color: #b2b2b2;
+  --gray-color: #767676;
+  --expand-color: rgba(255, 255, 255, 0.05);
+
+  .k-pdf-export {
+    --bg-color: white;
+    --font-color: rgba(0, 0, 0, 0.73);
+    --link-color: #21759b !important;
+    --link-color-hover: #0f3647 !important;
+    --link-color-visited: #9f9f9f !important;
+    --secondary-color: #666 !important;
+    --gray-color: #ededed !important;
+    --expand-color: rgba(0, 0, 0, 0.05) !important;
+
+    p,
+    ul,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--font-color);
+    }
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+a {
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--link-color-hover);
+  }
+
+  &:visited {
+    color: var(--link-color-visited);
+  }
+}
+
+span[data-tip] {
+  border-bottom: 1px dotted var(--secondary-color);
+  cursor: help;
+}
+
+.action-link {
+  color: rgb(249, 178, 0);
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    border-bottom: 1px solid rgba(249, 178, 0, 0.4);
+  }
+}
+
+/* Temporary manually preload Font Awesome styles */
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.body {
+  header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--gray-color);
+    margin-bottom: 2rem;
+    top: 0;
+    z-index: 1;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 100;
+      margin: 2rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+hr {
+  height: 6px;
+  margin: 2rem 0;
+  background: repeating-linear-gradient(-40deg,
+      var(--gray-color),
+      var(--gray-color) 2px,
+      var(--bg-color) 0,
+      var(--bg-color) 6px);
+  border: none;
+}
+
+.sup {
+  font-size: 0.6rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-left: 0.2rem;
+}

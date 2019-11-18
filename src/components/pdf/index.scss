@@ -1,0 +1,13 @@
+.pdf {
+  color: #f9b200;
+  cursor: pointer;
+  margin-left: auto;
+
+  &::after {
+    content: "export PDF";
+    color: #f9b200;
+    font-weight: bold;
+    vertical-align: top;
+    padding: 0 10px 0 5px;
+  }
+}
