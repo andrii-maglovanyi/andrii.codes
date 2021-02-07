@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 
 <div style="text-align:center;">
 
-## Hi, I'm Andrii, a software engineer.
+## Hi, I'm Andrii, a software engineer
 
 My best achievements are yet to come and it keeps me going.
 
@@ -22,6 +22,6 @@ sx={{
 
 ---
 
-Check out my <Link className="action-link" to="/blog">blog</Link> and <Link className="action-link" to="/cv">resume</Link>.
+Check out my <Link className="action-link" to="/blog">blog</Link>, <Link className="action-link" to="https://algoholic.dev">book</Link> and <Link className="action-link" to="/cv">resume</Link>.
 
 </div>

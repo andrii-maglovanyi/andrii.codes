@@ -96,7 +96,7 @@ I'm able to effectively self-manage on independent projects, as well as collabor
 
 <a id="speakap"></a>
 
-### Senior Fullstack Engineer at Speakap B.V.
+### Senior Fullstack Engineer at Speakap B.V
 
 <Text color="gray">June 2018 - Present <Bullet/> <Link href='https://www.speakap.com/'>speakap.com</Link> <Bullet/> Amsterdam, The Netherlands</Text>
 
@@ -126,7 +126,7 @@ JavaScript, React, TypeScript, Node.js, GraphQL, Jest, Cypress, Jenkins, GitHub 
 
 <header>
 
-### Front-end Developer at Backbase B.V.
+### Front-end Developer at Backbase B.V
 
 <Text color="gray">April 2017 - June 2018 <Bullet/> <Link href='https://www.backbase.com/'>backbase.com</Link> <Bullet/> Amsterdam, The Netherlands</Text>
 
@@ -180,7 +180,7 @@ Java, GCP, JavaScript, TypeScript, Node.js, React, Webpack, MySQL, Redis, Jenkin
 
 <header>
 
-### Fullstack Web Developer at Otravo B.V.
+### Fullstack Web Developer at Otravo B.V
 
 <Text color="gray">August 2011 - November 2015 <Bullet/> <Link href='https://www.otravo.com/'>otravo.com</Link> <Bullet/> Kyiv, Ukraine</Text>
 
@@ -269,25 +269,29 @@ Javascript <ProgressBar scale={5} />
 React/Redux <ProgressBar scale={5} />
 TypeScript <ProgressBar scale={4} />
 Node.js <ProgressBar scale={4} />
-Elm <ProgressBar scale={4} />
 MongoDB/MySQL <ProgressBar scale={3} />
 GraphQL <ProgressBar scale={3} />
 Docker <ProgressBar scale={3} />
+Elm <ProgressBar scale={3} />
 Jest/Cypress <ProgressBar scale={3} />
 Jenkins/GitHub Actions <ProgressBar scale={3} />
 Lodash/Ramda/RxJS <ProgressBar scale={3} />
+AWS/GCP <ProgressBar scale={2} />
 Python <ProgressBar scale={2} />
-Rust <ProgressBar scale={2} />
 
 ## Principles
 
-Application Security,
-Declarative programming,
-Mobile first,
-Progressive Enhancement,
-Referential transparency,
-SOLID,
-TDD
+**No silver bullets**<br/>
+Off-the-shelf solutions deliver quick value but add inertia and accidental complexity.
+
+**Reduce inertia**<br/>
+Make decisions that favour quick feedback and change while reducing dependencies among teams.
+
+**Eliminate accidental complexity**<br/>
+Proactively remove and replace excessively complex processes and solutions so that you can focus on the essential complexity.
+
+**Consistent interfaces and data flows**<br/>
+Remove data duplication and create clean systems with consistent integration interfaces
 
 ## Project Management
 
