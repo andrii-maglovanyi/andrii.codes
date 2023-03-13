@@ -94,11 +94,26 @@ I'm able to effectively self-manage on independent projects, as well as collabor
 
 <header>
 
+### Full-stack Developer at Vonage
+
+<Text color="gray">July 2021 - Present <Bullet/> <Link href='https://www.vonage.co.uk/'>vonage.com</Link> <Bullet/> London, UK</Text>
+
+</header>
+
+A platform over voice, messaging, scheduling and other APIs for building use cases such as voice and message notifications, IVRs, and chatbots.
+
+- Created a marketplace app with a possibily to publish and install custom telecom solutions.
+- Developed a UI for cloud runtime dashboard for managing projects.
+
+React, TypeScript, GraphQL, Jest
+
+<header>
+
 <a id="speakap"></a>
 
 ### Senior Fullstack Engineer at Speakap B.V
 
-<Text color="gray">June 2018 - Present <Bullet/> <Link href='https://www.speakap.com/'>speakap.com</Link> <Bullet/> Amsterdam, The Netherlands</Text>
+<Text color="gray">June 2018 - July 2021 <Bullet/> <Link href='https://www.speakap.com/'>speakap.com</Link> <Bullet/> Amsterdam, The Netherlands</Text>
 
 </header>
 
