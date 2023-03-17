@@ -1,7 +1,7 @@
 ---
 path: "/cv"
 name: "Andrii Maglovanyi"
-title: "Web Developer"
+title: "Front-end Web Developer"
 ---
 
 import { Box, Flex, Link } from "rebass"
@@ -37,7 +37,7 @@ I'm able to effectively self-manage on independent projects, as well as collabor
 
 ## <Fa type="list-alt"/> Executive Summary
 
-- Over ten years of experience as Full-stack Web Developer;
+- Over twelve years of experience as Full-stack and Front-end Web Developer;
 - Extensive experience of development with JavaScript (Node.js, Angular/React and TypeScript);
 - Worked with relational (MySQL) and NoSQL (MongoDB, Redis) databases;
 - Hands-on experience in creating complex SQL queries, indexing and (de-)normalization data, replication, stored procedures, and triggers;
@@ -102,10 +102,11 @@ I'm able to effectively self-manage on independent projects, as well as collabor
 
 A platform over voice, messaging, scheduling and other APIs for building use cases such as voice and message notifications, IVRs, and chatbots.
 
-- Created a marketplace app with a possibily to publish and install custom telecom solutions.
-- Developed a UI for cloud runtime dashboard for managing projects.
+- Created a platform for distributing read-to-use applications and solution templates by developers with reviewing and version control. 
+- Developed from scratch a monitoring and analytics dashboard for Vonage cloud runtime.
+- Created a monorepo of micro-frontend applicatons with reusable components.
 
-React, TypeScript, GraphQL, Jest
+React (Next.js, Turborepo), TypeScript, GraphQL (Hasura), Jest, Cypress
 
 <header>
 
@@ -260,9 +261,10 @@ Master's degree in Electromechanical Engineering. Faculty of electric power engi
 
 ## Details
 
-Kyiv, Ukraine
+London, United Kingdom
 
-+380 66 292-4562 <br/>
++(44) 7375 774567 <br/>
++(380) 66 2924562 <br/>
 [andrii.maglovanyi@gmail.com](mailto:andrii.maglovanyi@gmail.com)
 
 ## Links
@@ -284,15 +286,15 @@ Javascript <ProgressBar scale={5} />
 React/Redux <ProgressBar scale={5} />
 TypeScript <ProgressBar scale={4} />
 Node.js <ProgressBar scale={4} />
+GraphQL <ProgressBar scale={4} />
+Jest/Cypress <ProgressBar scale={4} />
 MongoDB/MySQL <ProgressBar scale={3} />
-GraphQL <ProgressBar scale={3} />
 Docker <ProgressBar scale={3} />
-Elm <ProgressBar scale={3} />
-Jest/Cypress <ProgressBar scale={3} />
 Jenkins/GitHub Actions <ProgressBar scale={3} />
 Lodash/Ramda/RxJS <ProgressBar scale={3} />
 AWS/GCP <ProgressBar scale={2} />
 Python <ProgressBar scale={2} />
+Rust <ProgressBar scale={1} />
 
 ## Principles
 
